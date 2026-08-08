@@ -5,6 +5,7 @@ import { DashboardVisual } from './components/DashboardVisual';
 import { WalkthroughSection } from './components/WalkthroughSection';
 import { StatBar } from './components/StatBar';
 import { Footer } from './components/Footer';
+import { DemoMode } from './components/DemoMode';
 
 function App() {
   const [activeStep, setActiveStep] = useState(0);
@@ -57,6 +58,9 @@ function App() {
 
         <Footer />
       </div>
+
+      {/* Demo Mode — no-mic video recording assistant */}
+      <DemoMode />
     </>
   );
 }
