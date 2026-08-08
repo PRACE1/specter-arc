@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-dark-bg: #0A0C10;
+  --color-neon-violet: #8B5CF6;
+  --color-arc-cyan: #06B6D4;
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: #f1f5f9;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom glow utility */
+.glow-text-cyan {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+.glow-text-violet {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+.glow-text-green {
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+}
+
+.glass-panel-premium {
+  @apply bg-zinc-900/60 backdrop-blur-xl border border-white/[0.08] border-b-white/[0.03] shadow-[0_0_50px_-12px_rgba(139,92,246,0.15)];
+}
+
+/* Shimmer animation for Wallet Card */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite linear;
+}
+
+/* Node tree SVG pipeline animation */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -12;
+  }
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -12;
+  }
+}
+
+.neon-pipeline {
+  stroke-dasharray: 4 4;
+  animation: dash 1s linear infinite;
+}
